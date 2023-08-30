@@ -1,1 +1,31 @@
-/* здесь используйте глобальные переменные */
+// Colors
+// ------------------------
+
+// Default
+
+$color-black:                 #000000;
+$color-white:                 #ffffff;
+$transparent:                 rgba(0, 0, 0, 0);
+
+// Project palette
+
+$alice-blue:                  #f1f6fc;
+$alice-blue-light:            #fbfcfe;
+$edward:                      #8e9892;
+$purple:                      #6a107a;
+$dark-orchid:                 #b22ec8;
+$light-coral:                 #ff8282;
+$deep-sea:                    #0f805d;
+$lawn-green:                  #7bdb0a;
+
+// Typography
+// ------------------------
+
+$ff-comfortaa: "Comfortaa", "Arial", sans-serif;
+$ff-raleway: "Raleway", "Arial", sans-serif;
+
+// Viewport
+// ------------------------
+
+$vp-768: 768px;
+$vp-1440: 1440px;
