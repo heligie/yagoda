@@ -1,0 +1,136 @@
+.page-header {
+  background-color: $alice-blue;
+
+  @media (min-width: $vp-768) {
+    box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+  }
+}
+
+.page-header__container {
+  max-width: 1440px;
+}
+
+.page-header__wrapper {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 28px 8px 26px;
+
+  background-color: $alice-blue;
+  box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+}
+
+.page-header__toggle {
+  position: relative;
+
+  width: 45px;
+  height: 30px;
+  padding: 0;
+
+  background-color: $transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+
+    background-color: $deep-sea;
+    border-radius: 10px;
+  }
+
+  &::before {
+    top: 0;
+
+    box-shadow: 0 13px 0 $deep-sea;
+
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+
+  &::after {
+    bottom: 0;
+
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+
+  .is-open & {
+    width: 35px;
+
+    &::before,
+    &::after {
+      height: 3px;
+    }
+
+    &::before {
+      top: 14px;
+
+      box-shadow: 0 13px 0 $transparent;
+      transform: rotate(45deg);
+
+      transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+    }
+
+    &::after {
+      bottom: 13px;
+
+      transform: rotate(-45deg);
+
+      transition: bottom 0.3s, transform 0.3s 0.15s;
+    }
+  }
+
+  .no-js & {
+    display: none;
+  }
+
+  @media (min-width: $vp-768) {
+    display: none;
+  }
+}
+
+.page-header__navigation {
+  position: absolute;
+
+  width: 100%;
+  min-width: 320px;
+  padding: 32px 40px 152px 40px;
+
+  background-color: $alice-blue;
+  transform: translateY(-100%);
+
+  transition: transform 0.6s ease;
+
+  .no-js & {
+    position: relative;
+
+    transform: translateY(0);
+  }
+
+  .is-open & {
+    transform: translateY(0);
+  }
+}
+
+.page-header__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  row-gap: 29px;
+}
+
+.page-header__link {
+  font-size: 20px;
+  color: $color-black;
+}

@@ -5,19 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ягода</title>
+  <link rel="preload" href="fonts/comfortaa/comfortaa.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway/raleway.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header no-js">
     <div class="page-header__container">
-      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню."></button>
-      <nav class="page-header__navigation">
+      <div class="page-header__wrapper">
         <a class="page-header__logotype logotype" href="#" aria-label="Главная." aria-current="page">
           <picture>
             <source media="(min-width: 768px)" srcset="img/content/logo.svg" width="135" height="60">
             <img class="logotype__image" src="img/content/logo-mobile.svg" width="52" height="52" alt="Логотип интернет-магазина Ягода.">
           </picture>
         </a>
+        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню."></button>
+      </div>
+      <nav class="page-header__navigation">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="#">Каталог</a>
@@ -230,5 +234,6 @@
       </a>
     </div>
   </footer>
+  <script src="js/burger.js"></script>
 </body>
 </html>
