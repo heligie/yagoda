@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ягода</title>
   <link rel="preload" href="fonts/comfortaa/comfortaa.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/raleway/raleway.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway/raleway-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,15 +42,17 @@
   <main class="page-main">
     <h1 class="visually-hidden">Ягода — интернет-магазин доставки свежих и замороженных ягод.</h1>
     <section class="intro">
-      <h2 class="intro__title">Ягоды с доставкой</h2>
-      <ul class="intro__list">
-        <li class="intro__item intro__item--berries">Отборные ягоды</li>
-        <li class="intro__item intro__item--freezing">Натуральный вкус сохранён методом шоковой заморозки</li>
-        <li class="intro__item intro__item--delivery">Доставка по Санкт-Петербургу</li>
-      </ul>
-      <a class="intro__button button" href="form.html">Заказать</a>
+      <div class="intro__container">
+        <h2 class="intro__title">Ягоды с&nbsp;доставкой</h2>
+        <ul class="intro__list">
+          <li class="intro__item intro__item--berries">Отборные ягоды</li>
+          <li class="intro__item intro__item--freezing">Натуральный вкус сохранён методом шоковой заморозки</li>
+          <li class="intro__item intro__item--delivery">Доставка по Санкт-Петербургу</li>
+        </ul>
+        <a class="intro__button button" href="form.html">Заказать</a>
+      </div>
     </section>
-    <section class="catalog">
+    <section class="catalog leaves">
       <h2 class="catalog__title">Каталог</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -151,30 +153,30 @@
         </li>
       </ul>
     </section>
-    <section class="news">
+    <section class="news leaves">
       <h2 class="news__title">Что новенького?</h2>
       <div class="news__wrapper">
-        <article>
-          <h3>Новый урожай клубники</h3>
-          <p>К нам поступила свежая сочная ароматная клубника из Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг. Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
-          <time datetime="2022-06-22">22 июня 2022</time>
+        <article class="news__item article">
+          <h3 class="article__title">Новый урожай клубники</h3>
+          <p class="article__description">К&nbsp;нам поступила свежая сочная ароматная клубника из&nbsp;Алтайского края. Крупные отборные ягоды можно приобрести свежими от&nbsp;200&nbsp;гр, или замороженными от&nbsp;1&nbsp;кг. Поторопитесь, сезон клубники короткий и&nbsp;свежие ягоды скоро закончатся.</p>
+          <time class="article__date" datetime="2022-06-22">22 июня 2022</time>
         </article>
-        <article>
-          <h3>В июне дарим скидку 15% на все свежие ягоды</h3>
-          <p>Свежие ягоды урожая этого года со скидкой 15%.  Клубнику, малину, голубику, вишню доставим от 200 гр.</p>
-          <time datetime="2022-06-15">15 июня 2022</time>
+        <article class="news__item article">
+          <h3 class="article__title">В&nbsp;июне дарим скидку&nbsp;15% на&nbsp;все свежие ягоды</h3>
+          <p class="article__description">Свежие ягоды урожая этого года со скидкой 15%.  Клубнику, малину, голубику, вишню доставим от 200 гр.</p>
+          <time class="article__date" datetime="2022-06-15">15 июня 2022</time>
         </article>
-        <article>
-          <h3>Микс из ягод</h3>
-          <p>Мы приготовим для вас смеси из различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить их естественный вкус и аромат.</p>
-          <time datetime="2022-06-02">2 июня 2022</time>
+        <article class="news__item article">
+          <h3 class="article__title">Микс из ягод</h3>
+          <p class="article__description">Мы&nbsp;приготовим для вас смеси из&nbsp;различных замороженных ягод по&nbsp;вашему пожеланию. Ягодные смеси удобно использовать для приготовления напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить их&nbsp;естественный вкус и&nbsp;аромат.</p>
+          <time class="article__date" datetime="2022-06-02">02 июня 2022</time>
         </article>
       </div>
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Где забрать ягоды?</h2>
-        <span>Забери ягоды с нашего склада по адресу:</span>
+        <span class="contacts__description">Забери ягоды с&nbsp;нашего склада по&nbsp;адресу:</span>
         <address class="contacts__info">
           <span class="contacts__text contacts__text--address">Набережная Обводного канала, 101</span>
           <a class="contacts__text contacts__text--tel" href="tel:+79105244118">+ 7 910 524 41 18</a>
@@ -234,6 +236,8 @@
       </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
   <script src="js/burger.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

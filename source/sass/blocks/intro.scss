@@ -1,0 +1,70 @@
+.intro {
+  padding: 68px 28px 192px 28px;
+
+  background-color: $alice-blue;
+  background-image: url("../../img/background/intro-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/intro-mobile@2x.jpg");
+  }
+}
+
+.intro__title {
+  margin: 0 0 38px 0;
+
+  text-align: center;
+
+  @include title;
+}
+
+.intro__list {
+  display: grid;
+  margin: 0 0 55px 0;
+  padding: 0 0 0 29px;
+
+  list-style: none;
+  font-size: 16px;
+
+  row-gap: 20px;
+}
+
+.intro__item {
+  position: relative;
+
+  padding: 0 0 0 44px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 32px;
+    height: 32px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--berries::before {
+    top: -6px;
+
+    background-image: url("../../img/svg/leaf.svg");
+  }
+
+  &--freezing::before {
+    top: 15px;
+
+    background-image: url("../../img/svg/ice.svg");
+  }
+
+  &--delivery::before {
+    top: 6px;
+
+    background-image: url("../../img/svg/delivery.svg");
+  }
+}
+
+.intro__button {
+  box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+}

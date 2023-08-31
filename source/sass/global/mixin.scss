@@ -1,0 +1,14 @@
+@mixin title {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: $ff-comfortaa;
+  color: $deep-sea;
+
+  @media (min-width: $vp-768) {
+    font-size: 48px;
+  }
+
+  @media (min-width: $vp-1440) {
+    font-size: 52px;
+  }
+}

@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+
+  font-size: 20px;
+  line-height: normal;
+  font-family: $ff-raleway;
+  text-align: center;
+  color: $alice-blue-light;
+
+  background-color: $purple;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ягода: оформление заказа</title>
   <link rel="preload" href="fonts/comfortaa/comfortaa.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/raleway/raleway.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway/raleway-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -193,7 +193,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Где забрать ягоды?</h2>
-        <span>Забери ягоды с нашего склада по адресу:</span>
+        <span class="contacts__description">Забери ягоды с нашего склада по адресу:</span>
         <address class="contacts__info">
           <span class="contacts__text contacts__text--address">Набережная Обводного канала, 101</span>
           <a class="contacts__text contacts__text--tel" href="tel:+79105244118">+ 7 910 524 41 18</a>
@@ -253,6 +253,8 @@
       </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
   <script src="js/burger.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

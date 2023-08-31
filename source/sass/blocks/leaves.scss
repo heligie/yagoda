@@ -1,0 +1,17 @@
+.leaves {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 228px;
+    height: 32px;
+
+    background-image: url("../../img/svg/leaves.svg");
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
+}

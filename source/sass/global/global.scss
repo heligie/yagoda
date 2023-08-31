@@ -15,9 +15,12 @@ body {
   min-height: 100%;
   margin: 0;
 
+  font-weight: 400;
   font-size: 14px;
   line-height: normal;
   font-family: $ff-raleway;
+
+  background-color: $alice-blue-light;
 }
 
 a {

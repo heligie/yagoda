@@ -1,0 +1,18 @@
+.news {
+  padding: 64px 26px 96px 26px;
+}
+
+.news__title {
+  margin: 0 0 64px 0;
+
+  text-align: center;
+
+  @include title;
+}
+
+.news__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 24px;
+}
