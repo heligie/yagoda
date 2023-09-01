@@ -41,15 +41,14 @@
   </header>
   <main class="page-main">
     <section class="order">
-      <header class="order__heading">
-        <div class="order__picture"></div>
+      <header class="order__heading leaves">
         <h1 class="order__title">Закажи ягоды</h1>
-        <p class="order__description">Мы соберем для вас ягоды и доставим их в удобном для вас виде - свежими или замороженными</p>
+        <p class="order__description">Мы&nbsp;соберем для вас ягоды и&nbsp;доставим их&nbsp;в&nbsp;удобном для&nbsp;вас&nbsp;виде&nbsp;- свежими или замороженными</p>
       </header>
-      <form action="https://echo.htmlacademy.ru/courses" method="post">
+      <form class="order__form leaves" action="https://echo.htmlacademy.ru/courses" method="post">
         <fieldset class="order__fieldset">
           <legend class="order__legend">Выберите ягоды</legend>
-          <ul class="order__list">
+          <ul class="order__list order__list--berries">
             <li class="order__item">
               <label class="order__control">
                 <input class="order__input" type="checkbox" name="berry" value="lingonberry">
@@ -114,7 +113,7 @@
         </fieldset>
         <fieldset class="order__fieldset">
           <legend class="order__legend">Вид хранения</legend>
-          <ul class="order__list">
+          <ul class="order__list order__list--type">
             <li class="order__item">
               <label class="order__control">
                 <input class="order__input" type="checkbox" name="type" value="fresh">
@@ -137,52 +136,52 @@
         </fieldset>
         <fieldset class="order__fieldset">
           <legend class="order__legend">Способ доставки</legend>
-          <ul class="order__list">
+          <ul class="order__list order__list--delivery">
             <li class="order__item">
               <label class="order__control">
                 <input class="order__input" type="radio" name="method" value="delivery" checked>
-                <span class="order__value">Доставка (по СПБ в пределах КАД)</span>
+                <span class="order__value">Доставка<br> (по&nbsp;СПБ в&nbsp;пределах КАД)</span>
               </label>
             </li>
             <li class="order__item">
               <label class="order__control">
                 <input class="order__input" type="radio" name="method" value="pickup">
-                <span class="order__value">Самовывоз (Набережная Обводного канала, 101)</span>
+                <span class="order__value">Самовывоз (Набережная&nbsp;Обводного канала, 101)</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="order__fieldset">
           <legend class="order__legend">Ваши контакты</legend>
-          <ul class="order__list">
+          <ul class="order__list order__list--contact">
             <li class="order__item">
               <label class="order__contact">
-                <span class="order__value">Имя <sup>*</sup></span>
+                <span class="order__value">Имя <span class="order__asterisk">*</span></span>
                 <input class="order__area" type="text" name="name" placeholder="Как к вам обращаться?" required>
               </label>
             </li>
             <li class="order__item">
               <label class="order__contact">
-                <span class="order__value">Телефон <sup>*</sup></span>
+                <span class="order__value">Телефон <span class="order__asterisk">*</span></span>
                 <input class="order__area" type="tel" name="phone" placeholder="+7 ххх ххх хх хх" required>
               </label>
             </li>
             <li class="order__item">
               <label class="order__contact">
-                <span class="order__value">Email <sup>*</sup></span>
+                <span class="order__value">Email <span class="order__asterisk">*</span></span>
                 <input class="order__area" type="email" name="mail" placeholder="Ваш email" required>
               </label>
             </li>
             <li class="order__item">
               <label class="order__contact">
-                <span class="order__value">Адрес <sup>*</sup></span>
-                <textarea class="order__area order__area--textarea" name="address" placeholder="Адрес в Санкт-Петербурге" required></textarea>
+                <span class="order__value">Адрес <span class="order__asterisk">*</span></span>
+                <textarea class="order__area order__area--address" name="address" placeholder="Адрес в Санкт-Петербурге" required></textarea>
               </label>
             </li>
             <li class="order__item">
               <label class="order__contact">
-                <span class="order__value">Пожелания к заказу</span>
-                <textarea class="order__area order__area--textarea" name="comment" placeholder="Чем мы можем вам помочь?"></textarea>
+                <span class="order__value order__value--small">Пожелания к заказу</span>
+                <textarea class="order__area order__area--comment" name="comment" placeholder="Чем мы можем вам помочь?"></textarea>
               </label>
             </li>
           </ul>
@@ -190,10 +189,10 @@
         <button class="order__button button" type="submit">Заказать</button>
       </form>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--inner">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Где забрать ягоды?</h2>
-        <span class="contacts__description">Забери ягоды с нашего склада по адресу:</span>
+        <span class="contacts__description">Забери ягоды с&nbsp;нашего склада по&nbsp;адресу:</span>
         <address class="contacts__info">
           <span class="contacts__text contacts__text--address">Набережная Обводного канала, 101</span>
           <a class="contacts__text contacts__text--tel" href="tel:+79105244118">+ 7 910 524 41 18</a>
