@@ -2,12 +2,26 @@
   background-color: $alice-blue;
 
   @media (min-width: $vp-768) {
+    z-index: 10;
+
     box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
   }
 }
 
 .page-header__container {
   max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 22px 26px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 24px 192px 24px 156px;
+  }
 }
 
 .page-header__wrapper {
@@ -21,6 +35,12 @@
 
   background-color: $alice-blue;
   box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+
+    box-shadow: none;
+  }
 }
 
 .page-header__toggle {
@@ -119,6 +139,19 @@
   .is-open & {
     transform: translateY(0);
   }
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    z-index: auto;
+
+    width: auto;
+    margin: 20px 0 16px 0;
+    padding: 0;
+
+    transform: translateY(0);
+
+    transition: none;
+  }
 }
 
 .page-header__list {
@@ -129,6 +162,19 @@
   list-style: none;
 
   row-gap: 29px;
+
+  @media (min-width: $vp-768) {
+    column-gap: 16px;
+
+    grid-template-columns: repeat(4, 112px);
+    row-gap: 20px;
+  }
+
+  @media (min-width: $vp-1440) {
+    column-gap: 28px;
+
+    grid-template-columns: repeat(4, 132px);
+  }
 }
 
 .page-header__link {

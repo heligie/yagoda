@@ -12,6 +12,14 @@
 
     background-image: url("../../img/svg/leaves.svg");
     background-repeat: no-repeat;
+    background-size: cover;
     transform: translateX(-50%);
+  }
+
+  @media (min-width: $vp-768) {
+    &::after {
+      width: 296px;
+      height: 42px;
+    }
   }
 }

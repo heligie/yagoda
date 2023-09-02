@@ -4,10 +4,40 @@
   background-color: $alice-blue;
   background-image: url("../../img/background/intro-mobile.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/background/intro-mobile@2x.jpg");
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 142px 28px 420px 214px;
+
+    background-image: url("../../img/background/intro-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/intro-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 172px 28px 249px 214px;
+
+    background-image: url("../../img/background/intro-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/intro-desktop@2x.jpg");
+    }
+  }
+}
+
+.intro__container {
+  max-width: 532px;
+  margin: 0 auto;
+
+  @media (min-width: $vp-1440) {
+    max-width: 550px;
   }
 }
 
@@ -17,6 +47,16 @@
   text-align: center;
 
   @include title;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 50px 0;
+
+    text-align: start;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 56px 0;
+  }
 }
 
 .intro__list {
@@ -28,6 +68,21 @@
   font-size: 16px;
 
   row-gap: 20px;
+
+  @media (min-width: $vp-768) {
+    max-width: 525px;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    row-gap: 24px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 0 0 0 23px;
+    margin: 0 0 59px;
+  }
 }
 
 .intro__item {
@@ -38,33 +93,44 @@
   &::before {
     content: "";
     position: absolute;
+    top: 50%;
     left: 0;
 
     width: 32px;
     height: 32px;
 
     background-repeat: no-repeat;
+    transform: translateY(-50%);
   }
 
   &--berries::before {
-    top: -6px;
-
     background-image: url("../../img/svg/leaf.svg");
   }
 
   &--freezing::before {
-    top: 15px;
-
     background-image: url("../../img/svg/ice.svg");
   }
 
   &--delivery::before {
-    top: 6px;
-
     background-image: url("../../img/svg/delivery.svg");
   }
 }
 
 .intro__button {
+  max-width: 336px;
+  margin: 0 auto;
+
   box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+    padding: 17px;
+
+    font-size: 28px;
+    letter-spacing: 1.4px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 0 37px;
+  }
 }
