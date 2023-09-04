@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Оформите заказ и мы соберем для вас ягодные сокровища!">
+  <meta name="keywords" content="свежие ягоды, шоковая заморозка, замороженные ягоды">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ягода: оформление заказа</title>
   <link rel="preload" href="fonts/comfortaa/comfortaa.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/raleway/raleway-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,10 +20,9 @@
     <div class="page-header__container">
       <div class="page-header__wrapper">
         <a class="page-header__logotype logotype" href="index.html" aria-label="Переход на главную страницу.">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/content/logo.svg" width="135" height="60">
-            <img class="logotype__image" src="img/content/logo-mobile.svg" width="52" height="52" alt="Логотип интернет-магазина Ягода.">
-          </picture>
+          <svg class="logotype__image" width="115" height="52" aria-hidden="true" focusable="false">
+            <use href="img/icons/stack.svg#logo"></use>
+          </svg>
         </a>
         <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню."></button>
       </div>
@@ -33,7 +38,7 @@
             <a class="page-header__link" href="#">Контакты</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link" href="#" aria-current="page">Заказать</a>
+            <a class="page-header__link page-header__link--current" href="#" aria-current="page" tabindex="-1">Заказать</a>
           </li>
         </ul>
       </nav>
@@ -43,150 +48,152 @@
     <section class="order">
       <header class="order__heading leaves">
         <h1 class="order__title">Закажи ягоды</h1>
-        <p class="order__description">Мы&nbsp;соберем для вас ягоды и&nbsp;доставим их&nbsp;в&nbsp;удобном для&nbsp;вас&nbsp;виде&nbsp;- свежими или замороженными</p>
+        <p class="order__description">Мы&nbsp;соберем для вас ягоды и&nbsp;доставим их&nbsp;в&nbsp;удобном для&nbsp;вас виде&nbsp;- свежими или замороженными</p>
       </header>
       <form class="order__form leaves" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="order__fieldset">
-          <legend class="order__legend">Выберите ягоды</legend>
-          <ul class="order__list order__list--berries">
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="lingonberry">
-                <span class="order__value">Брусника</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="cherry">
-                <span class="order__value">Вишня</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="blueberry">
-                <span class="order__value">Голубика</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="blackberry">
-                <span class="order__value">Ежевика</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="strawberry">
-                <span class="order__value">Клубника</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="cranberry">
-                <span class="order__value">Клюква</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="gooseberry">
-                <span class="order__value">Крыжовник</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="raspberry">
-                <span class="order__value">Малина</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="cloudberry" disabled>
-                <span class="order__value">Морошка</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="berry" value="blueberries" disabled>
-                <span class="order__value">Черника</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order__fieldset">
-          <legend class="order__legend">Вид хранения</legend>
-          <ul class="order__list order__list--type">
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="type" value="fresh">
-                <span class="order__value">Свежие ягоды</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="type" value="frozen">
-                <span class="order__value">Замороженные ягоды</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="checkbox" name="type" value="mix">
-                <span class="order__value">Ягодные миксы</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order__fieldset">
-          <legend class="order__legend">Способ доставки</legend>
-          <ul class="order__list order__list--delivery">
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="radio" name="method" value="delivery" checked>
-                <span class="order__value">Доставка<br> (по&nbsp;СПБ в&nbsp;пределах КАД)</span>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__control">
-                <input class="order__input" type="radio" name="method" value="pickup">
-                <span class="order__value">Самовывоз (Набережная&nbsp;Обводного канала, 101)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order__fieldset">
-          <legend class="order__legend">Ваши контакты</legend>
-          <ul class="order__list order__list--contact">
-            <li class="order__item">
-              <label class="order__contact">
-                <span class="order__value">Имя <span class="order__asterisk">*</span></span>
-                <input class="order__area" type="text" name="name" placeholder="Как к вам обращаться?" required>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__contact">
-                <span class="order__value">Телефон <span class="order__asterisk">*</span></span>
-                <input class="order__area" type="tel" name="phone" placeholder="+7 ххх ххх хх хх" required>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__contact">
-                <span class="order__value">Email <span class="order__asterisk">*</span></span>
-                <input class="order__area" type="email" name="mail" placeholder="Ваш email" required>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__contact">
-                <span class="order__value">Адрес <span class="order__asterisk">*</span></span>
-                <textarea class="order__area order__area--address" name="address" placeholder="Адрес в Санкт-Петербурге" required></textarea>
-              </label>
-            </li>
-            <li class="order__item">
-              <label class="order__contact">
-                <span class="order__value order__value--small">Пожелания к заказу</span>
-                <textarea class="order__area order__area--comment" name="comment" placeholder="Чем мы можем вам помочь?"></textarea>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="order__button button" type="submit">Заказать</button>
+        <div class="order__wrapper">
+          <fieldset class="order__fieldset order__fieldset--option">
+            <legend class="order__legend">Выберите ягоды</legend>
+            <ul class="order__list order__list--berries">
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="lingonberry">
+                  <span class="order__value">Брусника</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="cherry">
+                  <span class="order__value">Вишня</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="blueberry">
+                  <span class="order__value">Голубика</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="blackberry">
+                  <span class="order__value">Ежевика</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="strawberry">
+                  <span class="order__value">Клубника</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="cranberry">
+                  <span class="order__value">Клюква</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="gooseberry">
+                  <span class="order__value">Крыжовник</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="raspberry">
+                  <span class="order__value">Малина</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="cloudberry" disabled>
+                  <span class="order__value">Морошка</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="berry" value="blueberries" disabled>
+                  <span class="order__value">Черника</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--option">
+            <legend class="order__legend">Вид хранения</legend>
+            <ul class="order__list order__list--type">
+              <li class="order__item">
+                <label class="order__control order__control--indent">
+                  <input class="order__input" type="checkbox" name="type" value="fresh">
+                  <span class="order__value">Свежие ягоды</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control order__control--indent">
+                  <input class="order__input" type="checkbox" name="type" value="frozen">
+                  <span class="order__value">Замороженные ягоды</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="checkbox" name="type" value="mix">
+                  <span class="order__value">Ягодные миксы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--option">
+            <legend class="order__legend">Способ доставки</legend>
+            <ul class="order__list order__list--delivery">
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="radio" name="method" value="delivery" checked>
+                  <span class="order__value">Доставка<br> (по&nbsp;СПБ в&nbsp;пределах КАД)</span>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__control">
+                  <input class="order__input" type="radio" name="method" value="pickup">
+                  <span class="order__value">Самовывоз<br> (Набережная Обводного канала, 101)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--contact">
+            <legend class="order__legend">Ваши контакты</legend>
+            <ul class="order__list order__list--contact">
+              <li class="order__item">
+                <label class="order__contact">
+                  <span class="order__value">Имя <span class="order__asterisk">*</span></span>
+                  <input class="order__area" type="text" name="name" placeholder="Как к вам обращаться?" required>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__contact">
+                  <span class="order__value">Телефон <span class="order__asterisk">*</span></span>
+                  <input class="order__area" type="tel" name="phone" placeholder="+7 ххх ххх хх хх" required>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__contact">
+                  <span class="order__value">Email <span class="order__asterisk">*</span></span>
+                  <input class="order__area" type="email" name="mail" placeholder="Ваш email" required>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__contact">
+                  <span class="order__value">Адрес <span class="order__asterisk">*</span></span>
+                  <textarea class="order__area order__area--address" rows="1" name="address" placeholder="Адрес в Санкт-Петербурге" required></textarea>
+                </label>
+              </li>
+              <li class="order__item">
+                <label class="order__contact">
+                  <span class="order__value order__value--small">Пожелания к заказу</span>
+                  <textarea class="order__area order__area--comment" name="comment" placeholder="Чем мы можем вам помочь?"></textarea>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <button class="order__button button button--shadow" type="submit">Заказать</button>
       </form>
     </section>
     <section class="contacts contacts--inner">
@@ -215,10 +222,9 @@
   <footer class="page-footer">
     <div class="page-footer__container">
       <a class="page-footer__logotype logotype" href="index.html" aria-label="Переход на главную страницу.">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/content/logo.svg" width="135" height="60">
-          <img class="logotype__image" src="img/content/logo-mobile.svg" width="52" height="52" alt="Логотип интернет-магазина Ягода.">
-        </picture>
+        <svg class="logotype__image" width="115" height="52" aria-hidden="true" focusable="false">
+          <use href="img/icons/stack.svg#logo"></use>
+        </svg>
       </a>
       <ul class="page-footer__list">
         <li class="page-footer__item">

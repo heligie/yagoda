@@ -80,8 +80,8 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 0 0 0 23px;
     margin: 0 0 59px;
+    padding: 0 0 0 23px;
   }
 }
 
@@ -99,35 +99,31 @@
     width: 32px;
     height: 32px;
 
-    background-repeat: no-repeat;
+    background-color: $deep-sea;
     transform: translateY(-50%);
+
+    mask-repeat: no-repeat;
   }
 
   &--berries::before {
-    background-image: url("../../img/svg/leaf.svg");
+    mask-image: url("../../img/svg/leaf.svg");
   }
 
   &--freezing::before {
-    background-image: url("../../img/svg/ice.svg");
+    mask-image: url("../../img/svg/ice.svg");
   }
 
   &--delivery::before {
-    background-image: url("../../img/svg/delivery.svg");
+    mask-image: url("../../img/svg/delivery.svg");
   }
 }
 
 .intro__button {
-  max-width: 336px;
   margin: 0 auto;
-
-  box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
 
   @media (min-width: $vp-768) {
     margin: 0;
     padding: 17px;
-
-    font-size: 28px;
-    letter-spacing: 1.4px;
   }
 
   @media (min-width: $vp-1440) {

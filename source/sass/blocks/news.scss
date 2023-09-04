@@ -1,14 +1,14 @@
 .news {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 64px 26px 96px 26px;
+  padding: 64px 26px 94px 26px;
 
   @media (min-width: $vp-768) {
     padding: 73px 26px 152px 26px;
   }
 
   @media (min-width: $vp-1440) {
-    padding: 100px 26px 142px 26px;
+    padding: 100px 154px 142px 154px;
   }
 }
 

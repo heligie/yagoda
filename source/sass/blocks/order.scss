@@ -6,18 +6,52 @@
     width: 100%;
     height: 120px;
 
-    background-image: url("../../img/background/background-form.jpg");
+    background-color: $purple;
+    background-image: url("../../img/background/background-form-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/background-form@2x.jpg");
+      background-image: url("../../img/background/background-form-mobile@2x.jpg");
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    &::before {
+      height: 200px;
+
+      background-image: url("../../img/background/background-form-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/background-form-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    &::before {
+      background-image: url("../../img/background/background-form-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/background-form-desktop@2x.jpg");
+      }
     }
   }
 }
 
 .order__heading {
+  max-width: 532px;
+  margin: 0 auto;
   padding: 64px 26px 76px 26px;
+
+  @media (min-width: $vp-768) {
+    padding: 100px 26px 78px 26px;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 570px;
+    padding: 100px 26px 90px 26px;
+  }
 }
 
 .order__title {
@@ -26,20 +60,55 @@
   text-align: center;
 
   @include title;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 47px;
+
+    font-size: 52px;
+  }
 }
 
 .order__description {
-  margin: 0;
+  max-width: 245px;
+  margin: 0 auto;
 
   font-size: 16px;
   text-align: center;
+
+  @media (min-width: $vp-768) {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
+// Form
+//------------------
+
 .order__form {
-  display: grid;
+  max-width: 676px;
+  margin: 0 auto;
   padding: 50px 26px 121px 26px;
 
+  @media (min-width: $vp-768) {
+    padding: 72px 26px 144px 26px;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 840px;
+    padding: 60px 0 144px 0;
+  }
+}
+
+.order__wrapper {
+  display: grid;
+
   row-gap: 32px;
+
+  @media (min-width: $vp-768) {
+    row-gap: 0;
+  }
 }
 
 .order__fieldset {
@@ -47,6 +116,56 @@
   padding: 0;
 
   border: none;
+
+  @media (min-width: $vp-768) {
+    &--option {
+      margin-left: 45px;
+
+      &:nth-child(1) {
+        margin-bottom: 52px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 48px;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 46px;
+      }
+    }
+
+    &--contact {
+      .order__legend {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-left: 49px;
+
+    &--option {
+      &:nth-child(1) {
+        margin-bottom: 54px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 46px;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 46px;
+      }
+    }
+
+    &--contact {
+      max-width: 624px;
+
+      .order__legend {
+        text-align: start;
+      }
+    }
+  }
 }
 
 .order__legend {
@@ -55,7 +174,20 @@
 
   font-size: 20px;
   color: $deep-sea;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 40px 0;
+
+    font-size: 28px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 50px 0;
+  }
 }
+
+// Fieldset list
+//------------------
 
 .order__list {
   display: grid;
@@ -65,45 +197,177 @@
   list-style: none;
   font-size: 16px;
 
+  grid-auto-flow: dense;
+
   &--berries {
     text-transform: lowercase;
-    column-gap: 32px;
+    column-gap: 20px;
 
-    grid-auto-flow: column dense;
-    grid-auto-rows: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 124px);
     row-gap: 32px;
+
+    .order__item:nth-child(-n+6) {
+      grid-column: 1 / 2;
+    }
+
+    .order__item:nth-child(n+7):nth-child(-n+10) {
+      grid-column: 2 / -1;
+    }
   }
 
   &--type {
     text-transform: lowercase;
+    column-gap: 20px;
 
     row-gap: 23px;
   }
 
   &--delivery {
     row-gap: 32px;
+
+    .order__input {
+      align-self: center;
+    }
   }
 
   &--contact {
+    line-height: 20px;
+
     row-gap: 36px;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 18px;
+    line-height: 22px;
+
+    &--berries {
+      column-gap: 50px;
+
+      grid-template-columns: repeat(3, 134px);
+      row-gap: 24px;
+
+      .order__item:nth-child(n+5):nth-child(-n+8) {
+        grid-column: 2 / 3;
+      }
+
+      .order__item:nth-child(n+9):nth-child(-n+10) {
+        grid-column: 3 / -1;
+      }
+    }
+
+    &--type {
+      column-gap: 43px;
+
+      grid-template-columns: repeat(2, 235px);
+
+      .order__item:nth-child(2) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &--delivery {
+      column-gap: 24px;
+
+      grid-template-columns: 205px 255px;
+    }
+
+    &--contact {
+      font-size: 16px;
+      column-gap: 24px;
+
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 37px;
+
+      .order__item:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      .order__item:nth-child(3) {
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+      }
+
+      .order__item:nth-child(4) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+      }
+
+      .order__item:nth-child(5) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+      }
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    &--berries {
+      column-gap: 49px;
+
+      grid-template-columns: repeat(5, minmax(115px, max-content));
+
+      .order__item:nth-child(n+3):nth-child(-n+4) {
+        grid-column: 2 / 3;
+      }
+
+      .order__item:nth-child(n+5):nth-child(-n+6) {
+        grid-column: 3 / 4;
+      }
+
+      .order__item:nth-child(n+7):nth-child(-n+8) {
+        grid-column: 4 / 5;
+      }
+
+      .order__item:nth-child(n+9):nth-child(-n+10) {
+        grid-column: 5 / 6;
+      }
+    }
+
+    &--type {
+      column-gap: 49px;
+
+      grid-template-columns: repeat(3, minmax(157px, max-content));
+
+      .order__item:nth-child(2) {
+        grid-column: 2 / 3;
+      }
+    }
+
+    &--delivery {
+      column-gap: 48px;
+
+      grid-template-columns: 251px 354px;
+    }
   }
 }
 
+// Radio and checkbox
+//------------------
+
 .order__control {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 
   column-gap: 12px;
 
-  cursor: pointer;
+  @media (min-width: $vp-768) {
+    &--indent {
+      column-gap: 24px;
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    &--indent {
+      column-gap: 12px;
+    }
+  }
 }
 
 .order__input {
   position: relative;
 
-  width: 24px;
+  align-self: start;
+  min-width: 24px;
   height: 24px;
   margin: 0;
 
@@ -114,6 +378,10 @@
   cursor: pointer;
 
   appearance: none;
+
+  & + .order__value {
+    cursor: pointer;
+  }
 
   &::after {
     content: "";
@@ -166,22 +434,43 @@
     }
   }
 
-  &:disabled {
-    color: rgba($edward, 0.7);
+  &:hover {
+    color: $lawn-green;
   }
 
-  &:hover {
+  &:disabled {
+    color: rgba($edward, 0.7);
+
+    cursor: default;
+
+    & + .order__value {
+      cursor: default;
+    }
+  }
+
+  &:focus-visible {
     color: $lawn-green;
   }
 }
 
 .order__value {
-  max-width: 185px;
+  max-width: 188px;
+
+  @media (min-width: $vp-768) {
+    max-width: 219px;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 318px;
+  }
 }
 
 .order__asterisk {
   color: $light-coral;
 }
+
+// Input type text
+//---------------------
 
 .order__contact {
   display: grid;
@@ -199,6 +488,15 @@
 
     font-size: 14px;
     line-height: normal;
+  }
+
+  @media (min-width: $vp-768) {
+    .order__value--small {
+      margin: 0 12px 0 12px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -256,5 +554,32 @@
     visibility: hidden;
 
     pointer-events: none;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 15px 12px;
+
+    &--address {
+      min-height: 52px;
+    }
+
+    &--comment {
+      min-height: 144px;
+    }
+  }
+}
+
+// Button
+//-------------------
+
+.order__button {
+  margin: 32px auto 0 auto;
+
+  @media (min-width: $vp-768) {
+    margin: 41px auto 0 auto;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 48px auto 0 auto;
   }
 }

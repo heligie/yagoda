@@ -1,7 +1,38 @@
 .logotype {
   display: block;
+  width: 52px;
+  height: 52px;
+  overflow: clip;
+
+  &--current {
+    cursor: default;
+  }
+
+  &:not(.logotype--current):hover {
+    .logotype__image {
+      color: $lawn-green;
+    }
+  }
+
+  &:not(.logotype--current):active {
+    .logotype__image {
+      color: rgba($deep-sea, 0.5);
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    width: 145px;
+    height: 60px;
+  }
 }
 
 .logotype__image {
   display: block;
+
+  color: $deep-sea;
+
+  @media (min-width: $vp-768) {
+    width: 133px;
+    height: 60px;
+  }
 }

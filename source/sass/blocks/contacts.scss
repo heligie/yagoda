@@ -2,7 +2,7 @@
   padding: 86px 0 64px 0;
 
   &--inner {
-    padding: 63px 0 64px 0;
+    padding: 61px 0 63px;
   }
 
   @media (min-width: $vp-768) {
@@ -10,13 +10,15 @@
   }
 
   @media (min-width: $vp-1440) {
-    display: flex;
+    display: grid;
     align-items: start;
     max-width: 1440px;
     margin: 0 auto;
     padding: 100px 156px 100px 156px;
 
     column-gap: 110px;
+
+    grid-template-columns: 552px 1fr;
   }
 }
 
@@ -27,7 +29,7 @@
   padding: 0 26px 26px 26px;
 
   @media (min-width: $vp-768) {
-    padding: 0 26px 39px 26px;
+    padding: 0 26px 40px 26px;
   }
 
   @media (min-width: $vp-1440) {
@@ -45,6 +47,7 @@
   text-align: center;
 
   @include title;
+  justify-self: center;
 
   @media (min-width: $vp-768) {
     margin: 0 0 72px 0;
@@ -52,6 +55,8 @@
 
   @media (min-width: $vp-1440) {
     margin: 24px 0 48px 0;
+
+    justify-self: start;
   }
 }
 
@@ -77,11 +82,7 @@
 .contacts__info {
   display: grid;
 
-  row-gap: 10px;
-
-  @media (min-width: $vp-768) {
-    row-gap: 13px;
-  }
+  row-gap: 12px;
 
   @media (min-width: $vp-1440) {
     margin: 0 0 0 10px;
@@ -93,6 +94,7 @@
 
   display: flex;
   align-items: center;
+  max-width: 315px;
   min-height: 32px;
   padding: 0 0 0 36px;
 
@@ -123,6 +125,14 @@
 
   &--mail::before {
     mask-image: url("../../img/svg/envelope.svg");
+  }
+
+  &:not(.contacts__text--address):hover {
+    color: $lawn-green;
+  }
+
+  &:not(.contacts__text--address):active {
+    color: rgba($deep-sea, 0.5);
   }
 
   @media (min-width: $vp-768) {

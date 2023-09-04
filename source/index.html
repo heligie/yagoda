@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="В нашем магазине вы найдете ягоды, которые тренировались в самых суровых условиях – они пережили лютые морозы, грозы и борьбу с насекомыми, чтобы достичь идеальной сочности и вкуса.">
+  <meta name="keywords" content="свежие ягоды, шоковая заморозка, замороженные ягоды">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ягода</title>
   <link rel="preload" href="fonts/comfortaa/comfortaa.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/raleway/raleway-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header no-js">
     <div class="page-header__container">
       <div class="page-header__wrapper">
-        <a class="page-header__logotype logotype" href="#" aria-label="Главная." aria-current="page">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/content/logo.svg" width="135" height="60">
-            <img class="logotype__image" src="img/content/logo-mobile.svg" width="52" height="52" alt="Логотип интернет-магазина Ягода.">
-          </picture>
+        <a class="page-header__logotype logotype logotype--current" href="#" aria-label="Главная." aria-current="page" tabindex="-1">
+          <svg class="logotype__image" width="115" height="52" aria-hidden="true" focusable="false">
+            <use href="img/icons/stack.svg#logo"></use>
+          </svg>
         </a>
         <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню."></button>
       </div>
@@ -49,7 +54,7 @@
           <li class="intro__item intro__item--freezing">Натуральный вкус сохранён методом шоковой заморозки</li>
           <li class="intro__item intro__item--delivery">Доставка по Санкт-Петербургу</li>
         </ul>
-        <a class="intro__button button" href="form.html">Заказать</a>
+        <a class="intro__button button button--shadow" href="form.html">Заказать</a>
       </div>
     </section>
     <section class="catalog leaves">
@@ -247,10 +252,9 @@
   <footer class="page-footer">
     <div class="page-footer__container">
       <a class="page-footer__logotype logotype" href="index.html" aria-label="Возврат в начало страницы." aria-current="page">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/content/logo.svg" width="135" height="60">
-          <img class="logotype__image" src="img/content/logo-mobile.svg" width="52" height="52" alt="Логотип интернет-магазина Ягода.">
-        </picture>
+        <svg class="logotype__image" width="115" height="52" aria-hidden="true" focusable="false">
+          <use href="img/icons/stack.svg#logo"></use>
+        </svg>
       </a>
       <ul class="page-footer__list">
         <li class="page-footer__item">

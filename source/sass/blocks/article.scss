@@ -1,14 +1,16 @@
 .article {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
   min-height: 400px;
   padding: 28px 20px 72px 20px;
 
   background-color: $alice-blue-light;
   border: 2px solid $deep-sea;
   border-radius: 40px;
+
+  grid-template-rows: minmax(69px, auto) 1fr auto;
+  row-gap: 19px;
 
   &::before {
     content: "";
@@ -27,7 +29,10 @@
 
   @media (min-width: $vp-768) {
     min-height: 494px;
-    padding: 32px 36px 104px 36px;
+    padding: 30px 36px 104px 36px;
+
+    grid-template-rows: minmax(100px, auto) 1fr auto;
+    row-gap: 24px;
 
     &::before {
       bottom: 40px;
@@ -40,29 +45,32 @@
   @media (min-width: $vp-1440) {
     min-height: 492px;
     padding: 30px 36px 104px 36px;
+
+    grid-template-rows: minmax(96px, auto) 1fr auto;
   }
 }
 
 .article__title {
-  display: flex;
-  align-items: center;
   align-self: center;
-  min-height: 68px;
-  margin: 0 0 19px 0;
+  max-width: 200px;
+  margin: 0 auto;
 
+  font-weight: 400;
   font-size: 20px;
   text-align: center;
 
   @media (min-width: $vp-768) {
-    min-height: 100px;
-    margin: 0 0 22px 0;
+    max-width: 276px;
 
     font-size: 28px;
+  }
+
+  @media (min-width: $vp-1440) {
+    max-width: 288px;
   }
 }
 
 .article__description {
-  flex-grow: 1;
   margin: 0;
 
   @media (min-width: $vp-768) {
@@ -72,8 +80,6 @@
 }
 
 .article__date {
-  margin: 30px 0 0 0;
-
   text-align: end;
 
   @media (min-width: $vp-768) {

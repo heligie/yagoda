@@ -25,4 +25,9 @@ body {
 
 a {
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px dotted $deep-sea;
+    outline-offset: 2px;
+  }
 }

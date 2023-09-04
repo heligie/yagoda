@@ -14,4 +14,39 @@
   border: none;
   border-radius: 40px;
   cursor: pointer;
+
+  &--shadow {
+    min-width: 264px;
+    max-width: max-content;
+
+    box-shadow: 0 4px 4px 0 rgba($hot-purple, 0.25);
+  }
+
+  &:hover {
+    background-color: $dark-orchid;
+  }
+
+  &:active {
+    background-color: rgba($purple, 0.6);
+  }
+
+  &:focus-visible {
+    outline: 3px dotted $deep-sea;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background-color: $edward;
+    box-shadow: none;
+    cursor: default;
+  }
+
+  @media (min-width: $vp-768) {
+    &--shadow {
+      min-width: 336px;
+
+      font-size: 28px;
+      letter-spacing: 1.4px;
+    }
+  }
 }

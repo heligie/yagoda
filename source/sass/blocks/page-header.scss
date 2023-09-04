@@ -50,6 +50,8 @@
   height: 30px;
   padding: 0;
 
+  color: $deep-sea;
+
   background-color: $transparent;
   border: none;
   cursor: pointer;
@@ -64,14 +66,14 @@
     width: 100%;
     height: 5px;
 
-    background-color: $deep-sea;
+    background-color: currentColor;
     border-radius: 10px;
   }
 
   &::before {
     top: 0;
 
-    box-shadow: 0 13px 0 $deep-sea;
+    box-shadow: 0 13px 0 currentColor;
 
     transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
@@ -96,7 +98,7 @@
       box-shadow: 0 13px 0 $transparent;
       transform: rotate(45deg);
 
-      transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+      transition: box-shadow 0.3s 0.15s, top 0.3s, transform 0.3s 0.15s;
     }
 
     &::after {
@@ -110,6 +112,14 @@
 
   .no-js & {
     display: none;
+  }
+
+  &:hover {
+    color: $lawn-green;
+  }
+
+  &:active {
+    color: rgba($deep-sea, 0.5);
   }
 
   @media (min-width: $vp-768) {
@@ -180,4 +190,16 @@
 .page-header__link {
   font-size: 20px;
   color: $color-black;
+
+  &--current {
+    cursor: default;
+  }
+
+  &:not(.page-header__link--current):hover {
+    color: $lawn-green;
+  }
+
+  &:not(.page-header__link--current):active {
+    color: $deep-sea;
+  }
 }
