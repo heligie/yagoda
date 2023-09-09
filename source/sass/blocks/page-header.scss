@@ -91,7 +91,7 @@
       box-shadow: 0 13px 0 $transparent;
       transform: rotate(45deg);
 
-      transition: box-shadow 0.1s 0.1s, top 0.3s, transform 0.3s 0.15s;
+      transition: box-shadow 0s 0s, top 0.3s, transform 0.3s 0.15s;
     }
 
     &::after {
