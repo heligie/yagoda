@@ -1,5 +1,5 @@
 .intro {
-  padding: 68px 28px 192px 28px;
+  padding: 68px 26px 192px 26px;
 
   background-color: $alice-blue;
   background-image: url("../../img/background/intro-mobile.jpg");
@@ -12,7 +12,7 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 142px 28px 420px 214px;
+    padding: 142px 26px 420px 214px;
 
     background-image: url("../../img/background/intro-tablet.jpg");
 
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 172px 28px 249px 214px;
+    padding: 172px 26px 249px 214px;
 
     background-image: url("../../img/background/intro-desktop.jpg");
 
@@ -62,7 +62,7 @@
 .intro__list {
   display: grid;
   margin: 0 0 55px 0;
-  padding: 0 0 0 29px;
+  padding: 0 0 0 31px;
 
   list-style: none;
   font-size: 16px;

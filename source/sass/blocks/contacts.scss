@@ -55,8 +55,6 @@
 
   @media (min-width: $vp-1440) {
     margin: 24px 0 48px 0;
-
-    justify-self: start;
   }
 }
 
@@ -73,20 +71,12 @@
 
     font-size: 20px;
   }
-
-  @media (min-width: $vp-1440) {
-    margin: 0 0 20px 7px;
-  }
 }
 
 .contacts__info {
   display: grid;
 
   row-gap: 12px;
-
-  @media (min-width: $vp-1440) {
-    margin: 0 0 0 10px;
-  }
 }
 
 .contacts__text {

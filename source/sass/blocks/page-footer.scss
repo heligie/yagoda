@@ -15,13 +15,13 @@
 
   @media (min-width: $vp-768) {
     justify-content: space-between;
-    padding: 22px 26px 22px 20px;
+    padding: 22px 26px;
 
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (min-width: $vp-1440) {
-    padding: 24px 159px 24px 156px;
+    padding: 24px 156px;
   }
 }
 
@@ -29,8 +29,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  margin: 0;
-  padding: 9px 0;
+  margin: 9px 0;
+  padding: 0;
 
   list-style: none;
   column-gap: 20px;
@@ -39,14 +39,17 @@
   row-gap: 10px;
 
   @media (min-width: $vp-768) {
-    padding: 13px 10px;
+    justify-content: start;
+    max-width: 184px;
+    margin: 13px 0;
 
     column-gap: 32px;
+
+    justify-self: center;
   }
 
   @media (min-width: $vp-1440) {
-    margin-left: 20px;
-    padding: 11px 0;
+    max-width: 256px;
 
     justify-self: center;
   }

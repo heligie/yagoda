@@ -56,12 +56,6 @@
 
   border-radius: 40px;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.15);
-
-  @media (max-width: ($vp-768 - 1px)) {
-    &:nth-last-child(-n+2) {
-      display: none;
-    }
-  }
 }
 
 .catalog__image-link {
